@@ -59,7 +59,7 @@ a.idx__c:hover{opacity:.6}
 .hero__meta{display:flex;justify-content:space-between;color:var(--mute)}
 .hero__meta .r{text-align:right}
 .hero__stage{position:relative;display:grid;place-items:center;min-height:max(38vw,480px)}
-.word{font:900 21vw/.8 var(--disp);font-stretch:62%;letter-spacing:-.012em;text-transform:uppercase;white-space:nowrap;user-select:none;will-change:transform}
+.word{--wf:22vw;font:900 var(--wf)/.8 var(--disp);font-stretch:125%;letter-spacing:-.02em;text-transform:uppercase;white-space:nowrap;user-select:none;will-change:transform}
 .rig{position:absolute;left:50%;top:50%;width:min(90%,1220px);transform:translate(-50%,-50%);mix-blend-mode:difference;overflow:visible}
 .rig .labels text{font:500 13px var(--mono);letter-spacing:.08em}
 .js .rig .draw>*{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.5s var(--ease) forwards;animation-delay:calc(var(--d)*1s + .15s)}
@@ -67,7 +67,7 @@ a.idx__c:hover{opacity:.6}
 @keyframes draw{to{stroke-dashoffset:0}}
 @keyframes fade{to{opacity:1}}
 
-.roster{position:absolute;right:0;top:calc(50% + 7.2vw - 24px);width:min(240px,70vw);padding:34px 18px 8px;border-radius:20px}
+.roster{position:absolute;right:0;top:calc(50% + 22vw*.343 - 24px);width:min(240px,70vw);padding:34px 18px 8px;border-radius:20px}
 .roster__k{color:#2b2b29;margin-bottom:6px}
 .roster li{display:grid;grid-template-columns:28px 1fr auto;align-items:baseline;padding:4px 0;border-top:1px solid rgba(14,14,14,.16)}
 .roster li span{font:700 18px/1.1 var(--disp);font-stretch:80%}
@@ -86,6 +86,7 @@ a.idx__c:hover{opacity:.6}
 .def__h{font:800 clamp(38px,6vw,84px)/.9 var(--disp);font-stretch:70%;letter-spacing:-.01em;margin-right:14px}
 .def__w .mono{color:var(--mute)}
 .def__t{font-size:clamp(19px,2vw,25px);line-height:1.35;max-width:26em}
+.def__t b{font-weight:600;border-bottom:2px solid var(--red)}
 
 /* team. Without script (or with reduced motion) these are four plain full height sections. */
 .panel{position:relative;min-height:100svh;background:var(--paper);color:var(--ink);overflow:hidden}
@@ -160,7 +161,7 @@ a.idx__c:hover{opacity:.6}
   .nav__gh{padding:12px 12px}
   .hero{min-height:0;padding-top:88px}
   .hero__stage{min-height:0;padding:6vw 0 0;display:block}
-  .word{font-size:21.4vw}
+  .word{font-size:22vw;--wf:22vw}
   .rig{position:relative;left:0;top:0;transform:none;width:100%;margin-top:-12vw}
   .rig .labels,.rig .thin{display:none}
   .btn{padding:16px 18px}
